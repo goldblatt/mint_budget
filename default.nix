@@ -29,6 +29,12 @@ let
 
     };
 
+    python-django = buildFromPyPI {
+        package = "Django";
+        version = "1.8.3";
+        md5 = "31760322115c3ae51fbd8ac85c9ac428";
+    };
+
     python-xmltodict = buildFromPyPI {
         package = "xmltodict";
         version = "0.9.2";
@@ -290,5 +296,6 @@ in buildPythonPackage {
         python-mintapi
         python-pandas
         python-crontab
+        python-django
      ];
     }

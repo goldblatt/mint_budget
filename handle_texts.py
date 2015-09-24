@@ -11,7 +11,7 @@ class TwilioHandler:
         self.mint_data = MintData(mint_email, mint_password)
 
     def send_text(self):
-        body = "Total Spend For Month: %s" % self._get_total_spend_for_month()
+        body = self._get_total_spend_for_month()
         self._client.messages.create(
             body=body,
             to=settings.CELL_PHONE,
